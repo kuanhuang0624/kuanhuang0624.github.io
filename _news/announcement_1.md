@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper: “A Regional-Attentive Multi-Task Learning Framework for Breast Ultrasound Image Segmentation and Classification” has been published in IEEE Access.
+Our paper: “A Regional-Attentive Multi-Task Learning Framework for Breast Ultrasound Image Segmentation and Classification” was published in IEEE Access.
