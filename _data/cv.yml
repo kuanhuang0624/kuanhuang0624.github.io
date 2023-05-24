@@ -1,0 +1,85 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Kuan Huang
+    - name: Date of Birth
+      value: 24th June 1994
+    - name: Languages
+      value: English, Chinese
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D.
+      institution: Utah State University
+      year: 2021
+      description:
+        - 'Supervisor: Dr. Heng-Da Cheng.'
+        - 'Dissertation: Breast Ultrasound Image Segmentation Based on Uncertainty Reduction and Context Information.'
+        - Best Dissertation Award.
+    - title: B.Eng.
+      institution: Harbin Institute of Technology
+      year: 2016
+      description:
+        - 'Thesis topic: Estimating Lithium-ion Batteries State of Health (SOH) Using Particle Filter.'
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Assistant Professor
+      institution: Kean University, Union, NJ
+      year: 2022 - new
+
+    - title: Post-doctoral Researcher
+      institution: Baylor College of Medicine, Houston, Texas
+      year: 2021 - 2022
+      description:
+
+    - title: Teaching Assistant
+      institution: Utah State University, Logan, Utah
+      year: 2016 - 2021
+
+- title: Projects
+  type: time_table
+  contents:
+    - title: Breast Ultrasound Image Segmentation
+      year: 2016-now
+      description:
+        - Fuzzy deep convolutional neural network.
+        - Involving breast anatomy in segmentation.
+        - Shape-adaptive convolutional operator.
+        - Breast ultrasound image classification.
+        - Generative adversarial networks for segmentation.
+        - Interpretability of convolutional features in medical images.
+        - Weakly supervised and active learning in medical images.
+    - title: Pathology Image Analysis
+      year: 2021-now
+      description:
+        - Image style translation in pathology image.
+        - Nuclei instance segmentation and classification in H&E images.
+        - Weakly supervised nuclei distribution prediction in H&E images.
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - title: Students Partnering with Faculty (SpF) 2023 Awards, Kean University
+      year: 2023-2024
+    - title: Best Dissertation Award, Utah State University
+      year: 2022
+    - title: Travel grand of the 24th International Conference on Pattern Recognition, ICPR 2018
+      year: 2018
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Artificial intelligence.
+    - title: Computer vision.
+    - title: Machine learning.
+    - title: Pattern recognition.
+
+#
+#- title: Other Interests
+#  type: list
+#  contents:
+#    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
