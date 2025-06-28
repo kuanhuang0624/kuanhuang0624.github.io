@@ -43,26 +43,29 @@
 - title: Projects
   type: time_table
   contents:
-    - title: Breast Ultrasound Image Segmentation
+    - title: Breast Cancer Image Analysis
       year: 2016-now
       description:
-        - Fuzzy deep convolutional neural network.
-        - Involving breast anatomy in segmentation.
-        - Shape-adaptive convolutional operator.
-        - Breast ultrasound image classification.
-        - Generative adversarial networks for segmentation.
-        - Interpretability of convolutional features in medical images.
-        - Weakly supervised and active learning in medical images.
-    - title: Pathology Image Analysis
-      year: 2021-now
+        - Semi-supervised image segmentation.
+        - Weakly supervised Image Segmentation.
+        - Multi-modality image analysis.
+        - Ultrasound.
+        - Mammography.
+        - BIRADS classification.
+    - title: Chest X-ray Image Analysis
+      year: 2023-now
       description:
-        - Image style translation in pathology image.
-        - Nuclei instance segmentation and classification in H&E images.
-        - Weakly supervised nuclei distribution prediction in H&E images.
+        - Weakly supervised Image Segmentation.
+        - LLMs for medical image analysis.
+        - Radiology report generation.
 
 - title: Honors and Awards
   type: time_table
   contents:
+    - title: IST Fellowship, Kean University
+      year: 2024-2026
+    - title: Students Partnering with Faculty (SpF) 2025 Awards, Kean University
+      year: 2025-2026
     - title: Students Partnering with Faculty (SpF) 2023 Awards, Kean University
       year: 2023-2024
     - title: Best Dissertation Award, Utah State University
@@ -77,6 +80,8 @@
     - title: Computer vision.
     - title: Machine learning.
     - title: Pattern recognition.
+    - title: Medical image analysis.
+    - title: Uncertainty quantification.
 
 #
 #- title: Other Interests
