@@ -1,0 +1,60 @@
+# -----------------------------------------------------------------------------
+# Site configuration
+#
+# Every key below (except `sections`) is written into the element in index.html
+# that has the same id. A key may be either plain text, or a mapping with
+# `text` and `href` for links.
+# -----------------------------------------------------------------------------
+
+title: Kuan Huang | Kean University
+
+# Title area at the top of the page
+masthead-eyebrow: Kean University
+masthead-name: Kuan Huang, Ph.D.
+masthead-role: Assistant Professor
+masthead-affiliation: Department of Computer Science and Technology, Kean University
+
+# Sticky navigation bar
+page-top-title: Kuan Huang
+
+# Footer
+copyright-text: '&copy; 2026 Kuan Huang'
+footer-email-link:
+  text: khuang@kean.edu
+  href: mailto:khuang@kean.edu
+footer-cv-link:
+  text: Curriculum vitae
+  href: static/assets/pdf/Kuan-Huang-CV.pdf
+
+# -----------------------------------------------------------------------------
+# Sections
+#
+# `id`    -> the section's anchor, and the Markdown file contents/<id>.md
+# `nav`   -> the label shown in the navigation bar
+# `title` -> the heading shown above the section
+# `href`  -> optional; defaults to '#<id>'
+# -----------------------------------------------------------------------------
+
+sections:
+  - id: home
+    nav: HOME
+    title: About
+    href: '#page-top'
+  - id: research
+    nav: RESEARCH
+    title: Research
+  - id: publications
+    nav: PUBLICATIONS
+    title: Publications
+  - id: lab
+    nav: RESEARCH LAB
+    title: Research Lab
+  - id: teaching
+    nav: TEACHING
+    title: Teaching
+  - id: gallery
+    nav: GALLERY
+    title: Gallery
+  - id: cv
+    nav: CV
+    title: Curriculum Vitae

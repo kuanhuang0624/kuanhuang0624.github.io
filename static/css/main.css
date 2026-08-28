@@ -1,0 +1,721 @@
+/* ==========================================================================
+   Kuan Huang — academic homepage
+   Structure and Markdown loading are based on the academic-homepage-template
+   by Sen Li (MIT License). All styling below is original to this site.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+    --bg: #fdfcfa;
+    /* warm white */
+    --bg-band: #f5f3ee;
+    /* title area / quiet band */
+    --text: #23262a;
+    /* dark charcoal */
+    --text-soft: #5e636a;
+    --accent: #3d5a73;
+    /* muted blue-gray, the single accent */
+    --accent-deep: #2f4759;
+    --rule: #e3dfd8;
+    /* thin divider lines */
+    --rule-strong: #cfcabf;
+
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+    --wrap: 1000px;
+    --measure: 68ch;
+    --nav-h: 3.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. Base
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    color: var(--accent-deep);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.wrap {
+    max-width: var(--wrap);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    color: var(--accent-deep);
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--accent);
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Title area (static, no slideshow, no decorative background text)
+   -------------------------------------------------------------------------- */
+
+.masthead {
+    background: var(--bg-band);
+    border-bottom: 1px solid var(--rule);
+    padding: 3.25rem 0 2.5rem;
+}
+
+.masthead-eyebrow {
+    margin: 0 0 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.masthead-name {
+    margin: 0;
+    font-size: 2.1rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.masthead-role {
+    margin: 0.6rem 0 0;
+    font-size: 1.02rem;
+    font-weight: 500;
+}
+
+.masthead-affiliation {
+    margin: 0.15rem 0 0;
+    font-size: 1.02rem;
+    color: var(--text-soft);
+}
+
+/* --------------------------------------------------------------------------
+   4. Navigation
+   -------------------------------------------------------------------------- */
+
+.sitenav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+}
+
+.sitenav-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: var(--nav-h);
+}
+
+.sitenav-brand {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.sitenav-brand:hover {
+    color: var(--accent-deep);
+}
+
+.sitenav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 1.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sitenav-list a {
+    display: inline-block;
+    padding: 0.35rem 0;
+    font-size: 0.76rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-soft);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.sitenav-list a:hover {
+    color: var(--accent-deep);
+}
+
+.sitenav-list a[aria-current="true"] {
+    color: var(--accent-deep);
+    border-bottom-color: var(--accent);
+}
+
+.sitenav-toggle {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1px solid var(--rule-strong);
+    border-radius: 3px;
+    padding: 0.35rem 0.7rem;
+    font: inherit;
+    font-size: 0.76rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-soft);
+    cursor: pointer;
+}
+
+.sitenav-toggle-bars,
+.sitenav-toggle-bars::before,
+.sitenav-toggle-bars::after {
+    display: block;
+    width: 15px;
+    height: 1.5px;
+    background: currentColor;
+}
+
+.sitenav-toggle-bars {
+    position: relative;
+}
+
+.sitenav-toggle-bars::before,
+.sitenav-toggle-bars::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.sitenav-toggle-bars::before {
+    top: -5px;
+}
+
+.sitenav-toggle-bars::after {
+    top: 5px;
+}
+
+@media (max-width: 47.9375em) {
+    .sitenav-inner {
+        flex-wrap: wrap;
+        padding-top: 0.55rem;
+        padding-bottom: 0.55rem;
+    }
+
+    .sitenav-toggle {
+        display: inline-flex;
+    }
+
+    .sitenav-list {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-top: 1px solid var(--rule);
+        margin-top: 0.55rem;
+        padding-bottom: 0.35rem;
+    }
+
+    .sitenav-list.is-open {
+        display: flex;
+    }
+
+    .sitenav-list a {
+        display: block;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid var(--rule);
+    }
+
+    .sitenav-list li:last-child a {
+        border-bottom: none;
+    }
+
+    .sitenav-list a[aria-current="true"] {
+        border-bottom-color: var(--rule);
+        color: var(--accent-deep);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   5. Sections
+   -------------------------------------------------------------------------- */
+
+main {
+    display: block;
+}
+
+main:focus {
+    outline: none;
+}
+
+.section {
+    padding: 3.25rem 0 0.75rem;
+    scroll-margin-top: calc(var(--nav-h) + 0.5rem);
+}
+
+.section:last-child {
+    padding-bottom: 2.5rem;
+}
+
+.section-title {
+    margin: 0 0 1.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.section-body> :first-child {
+    margin-top: 0;
+}
+
+.section-body p,
+.section-body ul,
+.section-body ol,
+.section-body dl {
+    max-width: var(--measure);
+}
+
+.section-body p {
+    margin: 0 0 1.1rem;
+}
+
+.section-body h3 {
+    margin: 2.4rem 0 0.75rem;
+    font-size: 1.06rem;
+    font-weight: 650;
+    letter-spacing: 0.005em;
+}
+
+.section-body h4 {
+    margin: 1.9rem 0 0.6rem;
+    font-size: 0.95rem;
+    font-weight: 650;
+    color: var(--text);
+}
+
+.section-body h5 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+}
+
+.section-body ul,
+.section-body ol {
+    margin: 0 0 1.1rem;
+    padding-left: 1.25rem;
+}
+
+.section-body li {
+    margin-bottom: 0.45rem;
+}
+
+.section-body li>ul,
+.section-body li>ol {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.section-body hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2rem 0;
+    max-width: var(--measure);
+}
+
+.section-body code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--bg-band);
+    padding: 0.1em 0.35em;
+    border-radius: 2px;
+}
+
+.section-body em {
+    color: var(--text-soft);
+}
+
+.note {
+    font-size: 0.92rem;
+    color: var(--text-soft);
+}
+
+/* --------------------------------------------------------------------------
+   6. Home: biography + links left, photograph right
+   -------------------------------------------------------------------------- */
+
+.home-lead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 210px;
+    gap: 2.5rem;
+    align-items: start;
+    margin-bottom: 1.75rem;
+}
+
+.home-bio> :first-child {
+    margin-top: 0;
+}
+
+.home-bio p {
+    max-width: var(--measure);
+}
+
+.home-figure {
+    margin: 0;
+}
+
+.home-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+}
+
+@media (max-width: 47.9375em) {
+    .home-lead {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .home-figure {
+        max-width: 190px;
+    }
+}
+
+/* Compact inline link row (email, Scholar, ORCID, GitHub, LinkedIn, CV) */
+.section-body .link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.1rem;
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    max-width: none;
+    font-size: 0.94rem;
+}
+
+.section-body .link-list li {
+    margin: 0;
+}
+
+.section-body .link-list a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 1px;
+}
+
+.section-body .link-list a:hover {
+    border-bottom-color: var(--accent);
+}
+
+/* Recent news */
+.section-body .news {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.5rem;
+    max-width: var(--measure);
+}
+
+.section-body .news li {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 0 1rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+    margin: 0;
+}
+
+.section-body .news li:last-child {
+    border-bottom: none;
+}
+
+.section-body .news .date {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    padding-top: 0.2rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 34em) {
+    .section-body .news li {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.15rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   7. Publications
+   -------------------------------------------------------------------------- */
+
+/* Entries are plain Markdown lists; the styling is scoped to the section id so
+   that contents/publications.md needs no markup of its own. */
+
+#publications .section-body h3 {
+    margin: 2.25rem 0 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--text-soft);
+}
+
+#publications .section-body h3:first-of-type {
+    margin-top: 1.9rem;
+}
+
+#publications .section-body ul {
+    list-style: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    max-width: 76ch;
+}
+
+#publications .section-body li {
+    position: relative;
+    padding-left: 1.35rem;
+    margin-bottom: 0.95rem;
+    line-height: 1.5;
+}
+
+#publications .section-body li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.63em;
+    width: 0.4rem;
+    height: 1px;
+    background: var(--rule-strong);
+}
+
+/* Subtle highlight of the site owner's name in the author lists */
+#publications .section-body li strong {
+    font-weight: 650;
+    color: var(--accent-deep);
+}
+
+#publications .section-body li em {
+    color: var(--text-soft);
+}
+
+#publications .section-body li a {
+    font-size: 0.9em;
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule-strong);
+}
+
+#publications .section-body li a:hover {
+    border-bottom-color: var(--accent);
+}
+
+/* Expandable archive of older work */
+details.archive {
+    max-width: 76ch;
+    margin: 2rem 0 1rem;
+    border-top: 1px solid var(--rule);
+}
+
+details.archive > summary {
+    cursor: pointer;
+    padding: 0.85rem 0;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+details.archive > summary:hover {
+    color: var(--accent-deep);
+}
+
+details.archive > summary::marker {
+    color: var(--rule-strong);
+}
+
+details.archive[open] > summary {
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Gallery
+   -------------------------------------------------------------------------- */
+
+.section-body .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    max-width: none;
+}
+
+.section-body .gallery li,
+.section-body .gallery figure {
+    margin: 0;
+}
+
+.section-body .gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* original aspect ratio preserved: no cropping, no forced height */
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: var(--bg-band);
+}
+
+.section-body .gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.86rem;
+    color: var(--text-soft);
+    line-height: 1.45;
+}
+
+@media (max-width: 62em) {
+    .section-body .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 40em) {
+    .section-body .gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   9. Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--rule);
+    background: var(--bg-band);
+    padding: 1.75rem 0;
+    font-size: 0.86rem;
+    color: var(--text-soft);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-links {
+    margin-top: 0.3rem;
+}
+
+.footer-links .sep {
+    margin: 0 0.4rem;
+    color: var(--rule-strong);
+}
+
+.noscript-note {
+    padding: 2.5rem 1.5rem;
+}
+
+.noscript-note h2 {
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. Motion preferences
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   11. Print
+   -------------------------------------------------------------------------- */
+
+@media print {
+
+    .sitenav,
+    .skip-link {
+        display: none;
+    }
+
+    body {
+        background: #fff;
+        font-size: 11pt;
+    }
+}
