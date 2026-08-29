@@ -4,7 +4,7 @@
 
 - **CPS 3830: Machine Learning Foundations**
 - **CPS 5802: Machine Learning Innovations**
-- **TECH\*3832: Machine Learning Principles**  
+- **TECH 3832: Machine Learning Principles**  
   Designed for Information Technology majors.
 
 ### Previous Teaching at Kean University

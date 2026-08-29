@@ -172,7 +172,6 @@ terms on a second, held together by the two trailing spaces that make the line b
   Spring 2026
 ```
 
-An asterisk in a course code has to be escaped (`TECH\*3832`) or Markdown reads it as emphasis.
 The `#teaching` rules in `static/css/main.css` grey the second line, so do not mark the terms up
 by hand. Move a course to *Previous Teaching* once the semester ends, and update the `#### <term>`
 heading. Do not publish room numbers or meeting times unless they are current.
