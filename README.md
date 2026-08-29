@@ -161,15 +161,19 @@ year. Do not label anyone "current" or "former" unless that is actually known.
 ### A course
 
 In `contents/teaching.md`. Courses for the term being taught now go under
-`### Current and Upcoming Courses`, replacing the *To be updated* line; everything else goes
-under `### Previous Courses`. Use the format:
+`### Current Teaching at Kean University`, below a `#### <term>` heading; everything else goes
+under `### Previous Teaching at Kean University`. The course goes on the first line and its
+terms on a second, held together by the two trailing spaces that make the line break:
 
 ```markdown
-- **CPS 4801 — Artificial Intelligence.** Spring 2026.
+- **CPS 4801: Artificial Intelligence**  
+  Spring 2026
 ```
 
-Move a course to *Previous Courses* once the semester ends. Do not publish room numbers or
-meeting times unless they are current.
+An asterisk in a course code has to be escaped (`TECH\*3832`) or Markdown reads it as emphasis.
+The `#teaching` rules in `static/css/main.css` grey the second line, so do not mark the terms up
+by hand. Move a course to *Previous Teaching* once the semester ends, and update the `#### <term>`
+heading. Do not publish room numbers or meeting times unless they are current.
 
 ### A gallery image
 

@@ -697,7 +697,29 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   9. Funded projects page (projects/index.html, contents/projects.md)
+   9. Teaching
+   -------------------------------------------------------------------------- */
+
+/* Each entry is a course line followed by its terms on a second line. Scoping
+   the colours here keeps contents/teaching.md as plain Markdown: the course
+   name stays in the body colour and the terms recede. */
+
+#teaching .section-body li {
+    margin-bottom: 0.7rem;
+    color: var(--text-soft);
+}
+
+#teaching .section-body li strong {
+    font-weight: 600;
+    color: var(--text);
+}
+
+#teaching .section-body h4 {
+    margin-top: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. Funded projects page (projects/index.html, contents/projects.md)
    -------------------------------------------------------------------------- */
 
 /* This page carries its own title in the Markdown, so the heading levels are
@@ -756,7 +778,7 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   10. Footer
+   11. Footer
    -------------------------------------------------------------------------- */
 
 .site-footer {
@@ -791,7 +813,7 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   11. Motion preferences
+   12. Motion preferences
    -------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -809,7 +831,7 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   12. Print
+   13. Print
    -------------------------------------------------------------------------- */
 
 @media print {
