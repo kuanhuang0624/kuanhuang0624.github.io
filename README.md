@@ -87,7 +87,7 @@ The `<meta name="description">`, Open Graph tags, and canonical URL live in the 
 
 </div>
 <figure class="home-figure">
-<img src="static/assets/img/kuan-huang.jpg" width="569" height="566" alt="Portrait photograph of Kuan Huang">
+<img src="static/assets/img/kuan-huang-profile.jpg" width="800" height="784" alt="Portrait of Kuan Huang">
 </figure>
 </div>
 ```
@@ -98,6 +98,11 @@ be parsed. On phones the layout collapses to one column with the biography first
 To change the portrait, drop the new file into `static/assets/img/`, update the `src`, and set
 `width`/`height` to the image's real pixel dimensions (this prevents the page from jumping as
 it loads).
+
+The photograph behind the title area is set in `static/css/main.css` on `.masthead`
+(`background-image`, with `background-position` chosen so the building and the Kean signage stay
+in frame). The flat scrim on `.masthead::before` is what keeps the white title text readable;
+raise or lower `--masthead-scrim` if the photograph is replaced.
 
 ### A news item
 
@@ -184,7 +189,7 @@ once real photographs are added.
 
 ### The CV
 
-1. Replace `static/assets/pdf/Kuan-Huang-CV.pdf` with the new PDF, keeping the same filename
+1. Replace `static/assets/pdf/Kuan_Huang_CV_2026.pdf` with the new PDF, keeping the same filename
    (that way no links need to change).
 2. Update the *Last updated* line in `contents/cv.md`.
 
