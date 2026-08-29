@@ -1,17 +1,59 @@
-Grouped by year, most recent first. An asterisk (\*) marks corresponding authorship;
-entries marked *(student mentoring)* were led by student researchers I advised.
-Older work is in the archive at the end of this section.
+### 2026
+
+- DRSeg: A Weakly Supervised Framework for Breast Ultrasound Image Segmentation.
+  M. Xu, B. Hu, Y. Wang, P. Koo, **K. Huang**.
+  *Scientific Reports*, 2026. Accepted.
+
+- Point-Then-Preach: Coordinate-Guided Spatial Reasoning for Medical Vision-Language Models.
+  S. Ali, D. Kwak, **K. Huang**.
+  *48th Annual International Conference of the IEEE Engineering in Medicine and Biology
+  Society (EMBC 2026)*. Accepted.
+
+- Pixel-Level Data Augmentation for Robust Medical Image Classification.
+  M. Xu, B. Hu, B. Li, **K. Huang**.
+  *48th Annual International Conference of the IEEE Engineering in Medicine and Biology
+  Society (EMBC 2026)*. Accepted.
+
+- Efficient Fine-Tuning for Chest X-Ray Report Generation on Multiple HPC Platforms.
+  **K. Huang**, M. Xu, I. Lyngaas, Y. Wang.
+  *48th Annual International Conference of the IEEE Engineering in Medicine and Biology
+  Society (EMBC 2026)*. Accepted.
+
+- Hair Coverage Regression with Self-Training and Model Interpretation.
+  S. Ali, D. Kwak, **K. Huang**.
+  *International Conference on the AI Revolution: Research, Ethics, and Society (AIR-RES 2026)*.
+  Accepted.
 
 ### 2025
 
 - Using Adversarial Training to Improve Uncertainty Quantification.
   **K. Huang**, M. Xu, Y. Wang.
-  *IEEE Transactions on Artificial Intelligence*, 2025. Accepted.
+  *IEEE Transactions on Artificial Intelligence*, 2025.
 
 - EffTEE: Efficient Image Classification and Object Detection on Mobile Devices Using Trusted
   Execution Environments.
   B. Hu, J. You, **K. Huang**, M. Xu, D. Liu, S. Ma.
   *IEEE Access*, 2025.
+
+- Reliable Multi-layer Segmentation of Breast Ultrasound (BUS) Images.
+  **K. Huang**, Y. Zhang, H. D. Cheng, P. Xing.
+  In *Pattern Recognition and Computer Vision in the New AI Era*, World Scientific,
+  pp. 215–245, 2025.
+
+- Segmenting What Matters: A Dual Stage Active Learning Framework for Weakly Supervised Breast
+  Ultrasound Segmentation.
+  N. Zhang, M. Xu, G. Tong, **K. Huang**.
+  *IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2025)*.
+
+- A Deep Active Learning Framework with Information Guided Label Generation for Medical Image
+  Segmentation.
+  **K. Huang**, Y. Wan, J. Huang, M. Xu.
+  *IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2025)*.
+
+- One Pixel Can Change the Diagnosis: Adversarial and Non-Adversarial Robustness and
+  Uncertainty in Breast Ultrasound Classification Model.
+  **K. Huang**, N. Sahel, D. Karki, M. Xu, Y. Wang.
+  *AAAI 2025 Fall Symposium Series (FSS-25)*.
 
 - FD-GAN: A Dual-Domain Approach with Fourier Domain Discriminators for Denoising Low-Dose CT
   Images.
@@ -20,8 +62,13 @@ Older work is in the archive at the end of this section.
 
 - AnatoSegNet: Anatomy Based CNN-Transformer Network for Enhanced Breast Ultrasound Image
   Segmentation.
-  M. Xu, Y. Wang, **K. Huang**\*.
-  *22nd IEEE International Symposium on Biomedical Imaging (ISBI 2025)*. Accepted.
+  M. Xu, Y. Wang, **K. Huang**.
+  *22nd IEEE International Symposium on Biomedical Imaging (ISBI 2025)*.
+
+- Chest X-ray Diagnosis with Joint Report Generation and Lesion Localization Using Multimodal
+  Vision–Language Models.
+  H. Zhang, **K. Huang**.
+  *International Conference on Pattern Recognition and Artificial Intelligence (PRAI 2025)*.
 
 ### 2024
 
@@ -32,7 +79,7 @@ Older work is in the archive at the end of this section.
 
 - Incorporating Tumor Edge Information for Fine-Grained BI-RADS Classification of Breast
   Ultrasound Images.
-  M. Xu, J. Huang, **K. Huang**\*, F. Liu.
+  M. Xu, J. Huang, **K. Huang**, F. Liu.
   *IEEE Access*, 2024.
 
 - Bias and Cyberbullying Detection and Data Generation Using Transformer Artificial
@@ -46,48 +93,44 @@ Older work is in the archive at the end of this section.
 
 - Investigating the Fairness of Deep Learning Models in Breast Cancer Diagnosis Based on Race
   and Ethnicity.
-  **K. Huang**\*, Y. Wang, M. Xu.
+  **K. Huang**, Y. Wang, M. Xu.
   *AAAI 2024 Fall Symposium on Machine Intelligence for Equitable Global Health (MI4EGH 2024)*.
 
 - Weakly Supervised Breast Ultrasound Image Segmentation Based on Image Selection.
-  T. H. Lin, D. Kwak, **K. Huang**\*.
+  T. H. Lin, D. Kwak, **K. Huang**.
   *46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society
   (EMBC 2024)*.
 
 - Text-Guided Weakly Supervised Segmentation for COVID-19 Detection in X-Ray Images.
   C. Marte, M. Xu, **K. Huang**.
   *International Conference on Computational Science and Computational Intelligence (CSCI 2024)*.
-  *(student mentoring)*
 
 - Benchmarking the Robustness of Segmentation Methods Against Adversarial Attacks in Breast
   Ultrasound Segmentation.
   M. Ahmed, J. Loja, **K. Huang**, M. Xu.
   *International Conference on Computational Science and Computational Intelligence (CSCI 2024)*.
-  *(student mentoring)*
 
 - Multimodal Breast Ultrasound Segmentation: Combining Visual and Clinical Data.
   A. Mendez, M. Xu, **K. Huang**.
   *International Conference on Computational Science and Computational Intelligence (CSCI 2024)*.
-  *(student mentoring)*
 
 - Multi-Task Breast Ultrasound Image Classification and Segmentation Using Swin Transformer and
   VMamba Models.
   J. Rodriguez, **K. Huang**, M. Xu.
   *International Conference on Pattern Recognition and Artificial Intelligence (PRAI 2024)*.
-  *(student mentoring)*
 
 ### 2023
 
 - A Regional-Attentive Multi-Task Learning Framework for Breast Ultrasound Image Segmentation
   and Classification.
-  M. Xu, **K. Huang**\*, X. Qi.
+  M. Xu, **K. Huang**, X. Qi.
   *IEEE Access*, 2023.
   [Paper](https://ieeexplore.ieee.org/abstract/document/10016712) ·
   [PDF](static/assets/pdf/Xu-Huang-Qi-2023-RMTL-Net-IEEE-Access.pdf)
 
 - CFAB: An Online Data Augmentation to Alleviate the Spuriousness of Classification on Medical
   Ultrasound Images.
-  J. Huang, **K. Huang**\*, M. Xu, F. Liu.
+  J. Huang, **K. Huang**, M. Xu, F. Liu.
   *14th International Conference on Computer Vision Systems (ICVS 2023)*.
 
 - Transformers and LLMs as the New Benchmark in Early Cancer Detection.
@@ -98,22 +141,18 @@ Older work is in the archive at the end of this section.
   Network and Transformer.
   J. Loja, A. Mendez, **K. Huang**.
   *IEEE MIT Undergraduate Research Technology Conference (URTC 2023)*.
-  *(student mentoring)*
 
 - Mechanics of a Drone-Based System for Algal Bloom Detection Utilizing Deep Learning and LLMs.
   A. Balcacer, B. Hannon, Y. Kumar, **K. Huang**, J. Sarnoski, S. Liu, J. J. Li, P. Morreale.
   *IEEE MIT Undergraduate Research Technology Conference (URTC 2023)*.
-  *(student mentoring)*
 
 - Automatic Pill Identification System Based on Deep Learning and Image Preprocessing.
   E. Ponte, X. Amparo, **K. Huang**, D. Kwak.
   *World Congress in Computer Science, Computer Engineering, and Applied Computing (CSCE 2023)*.
-  *(student mentoring)*
 
 - Utilizing a Spatial Grid for Automated Parking Space Vacancy Detection.
   T. Dacayan, E. Ponte, **K. Huang**, D. Kwak.
   *International Conference on Computational Science and Computational Intelligence (CSCI 2023)*.
-  *(student mentoring)*
 
 ### 2022
 

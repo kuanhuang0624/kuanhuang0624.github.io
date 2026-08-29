@@ -547,6 +547,13 @@ main:focus {
     }
 }
 
+/* Older news folds away behind the same disclosure used in Publications; it is
+   held to the reading measure so it lines up with the news list above it. */
+#home .section-body details.archive {
+    max-width: var(--measure);
+    margin-top: 1.25rem;
+}
+
 /* --------------------------------------------------------------------------
    7. Publications
    -------------------------------------------------------------------------- */

@@ -48,24 +48,38 @@ LLM-based approaches to early cancer detection.
 
 ### Funded Research
 
-- **NSF CISE MSI Award #2430746** (2024), PI, $203,981. *Collaborative Research: CISE MSI:
-  RCBP: SCH: Advancing Breast Cancer Detection in Ultrasound Imaging through Active and Weakly
-  Supervised Learning Techniques.*
+- **Students Partnering with Faculty (SpF) 2026**, Kean University, Co-PI, $9,000.
+  *From Waves to Shorelines: AI-Driven Nonlinear Modeling of Beach Evolution.*
+
+- **President's Global-Local (Glocal) Anchor Institution Research Grant 2025–2026**, Kean
+  University, PI, $12,500. *Enhancing Cancer Detection through Advanced Mathematical and
+  Statistical Modeling.*
+
+- **Students Partnering with Faculty (SpF) 2025**, Kean University, PI, $11,500.
+  *Breast Cancer Detection in Ultrasound Images Using Weakly Supervised Techniques and
+  Multimodal Model.*
+
+- **IST Research Fellowship**, Kean University (2025), PI, $10,000. *Breast Cancer Early
+  Detection in Ultrasound Based on Weakly Supervised Techniques and Multi-Modal Models.*
+
+- **OpenAI Researcher Access Program** (2025), $10,000 in OpenAI API credits.
 
 - **Oak Ridge Leadership Computing Facility (OLCF) allocation** (2025), Co-PI. Frontier:
   20,000 node hours; Andes: 2,500 node hours. *Large Language Models for Breast Cancer
   Detection.*
 
-- **OpenAI Researcher Access Program** (2025), $10,000 in OpenAI API credits.
+- **NSF CISE MSI Award #2430746** (2024), PI, $203,981. *Collaborative Research: CISE MSI:
+  RCBP: SCH: Advancing Breast Cancer Detection in Ultrasound Imaging through Active and Weakly
+  Supervised Learning Techniques.*
 
 - **Students Partnering with Faculty (SpF) 2024**, Kean University, Co-PI, $17,000.
   *Trustworthy Weakly Supervised Breast Cancer Detection in Ultrasound Imaging.*
 
-- **CAHSI–Google Institutional Research Program** (2023), PI, $80,000 plus $20,000 in Google
-  Cloud Platform credits. *Weakly Supervised Image Segmentation with Image Level Labels.*
-
 - **IST Research Fellowship**, Kean University (2023), PI, $10,000. *A Novel Trustworthy
   Weakly-Supervised Image Segmentation Framework.*
+
+- **CAHSI–Google Institutional Research Program** (2023), PI, $80,000 plus $20,000 in Google
+  Cloud Platform credits. *Weakly Supervised Image Segmentation with Image Level Labels.*
 
 - **Students Partnering with Faculty (SpF) 2023**, Kean University, PI, $16,000.
   *Deep Learning-Based Breast Ultrasound Image Analysis.*
