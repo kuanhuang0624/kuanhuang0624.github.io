@@ -785,6 +785,11 @@ details.archive[open] > summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* A group of more than a few photographs sits three across instead. */
+#gallery-md .gallery-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 34em) {
     #projects-md h1,
     #gallery-md h1 {
@@ -792,8 +797,16 @@ details.archive[open] > summary {
     }
 }
 
+@media (max-width: 62em) {
+    #gallery-md .gallery-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 40em) {
-    #gallery-md .gallery {
+
+    #gallery-md .gallery,
+    #gallery-md .gallery-3 {
         grid-template-columns: minmax(0, 1fr);
     }
 }

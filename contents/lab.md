@@ -44,6 +44,7 @@ biomedical and healthcare applications.
 #### Lab Alumni
 
 - Cesar Marte Jimenez, M.S., May 2026
+- Nuojunxi Zhang, B.S., May 2026 (now a Ph.D. student at the University of South Florida)
 - Matthew Fernandez, M.S., May 2024
 
 ### Research Opportunities
