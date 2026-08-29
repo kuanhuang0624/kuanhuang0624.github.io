@@ -34,9 +34,11 @@ site.
 │   ├── publications.md     # publications by year + archive
 │   ├── lab.md              # research group, students, collaborators
 │   ├── teaching.md         # courses
-│   ├── gallery.md          # photographs
+│   ├── gallery.md          # photographs, shown at /gallery/
 │   ├── cv.md               # CV description and link
 │   └── projects.md         # funded projects, shown at /projects/
+├── gallery/
+│   └── index.html          # page shell for /gallery/
 ├── projects/
 │   └── index.html          # page shell for /projects/ (nav, footer, no hero)
 └── static/
@@ -177,22 +179,17 @@ heading. Do not publish room numbers or meeting times unless they are current.
 
 ### A gallery image
 
-1. Put the image in `static/assets/img/gallery/`.
-2. In `contents/gallery.md`, add one entry to the `<ul class="gallery">` list:
+Photographs live on their own page at `/gallery/`, not on the homepage: the `gallery` entry in
+`contents/config.yml` is marked `page: true`, which keeps its navigation item but renders no
+section on the front page.
 
-```html
-<li><figure>
-  <img src="static/assets/img/gallery/photo-name.jpg" alt="Describe what the photograph shows" loading="lazy" decoding="async" width="1600" height="1067">
-  <figcaption>Short caption, including the year.</figcaption>
-</figure></li>
-```
+1. Put the image in `static/assets/img/gallery/`, cropped to the same aspect ratio as the others
+   in its row so the row stays even (the current pair is 1000x1250).
+2. Add a `<li>` to the `<ul class="gallery">` in `contents/gallery.md` under the right `##`
+   event heading, with a root-relative `src`, real `width`/`height`, and `alt` text that
+   describes the photograph.
 
-`width`/`height` should be the real pixel dimensions; the grid preserves the aspect ratio and
-never crops. `loading="lazy"` keeps images off the critical path. The `alt` text should
-describe the photograph, not repeat the caption.
-
-The file currently contains a commented-out example and a placeholder paragraph — delete both
-once real photographs are added.
+Strip camera metadata before publishing: phone photographs carry GPS coordinates.
 
 ### The funded projects page
 

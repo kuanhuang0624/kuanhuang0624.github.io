@@ -6,14 +6,16 @@ This repository is Kuan Huang's academic homepage. Read this before changing any
 
 - **Preserve the simple one-page design.** One `index.html`, one stylesheet, seven sections
   rendered from Markdown. The seven sections are anchors on that single page, not separate
-  pages. The one exception is `projects/index.html`, which serves `/projects/` and renders
-  `contents/projects.md`; it is linked from the Research Lab section, not from the navigation.
-  Do not add further sub-pages without being asked.
+  pages. Two exceptions serve their own URLs from the same Markdown pipeline:
+  `projects/index.html` (`/projects/`, `contents/projects.md`, linked from the Research Lab
+  section) and `gallery/index.html` (`/gallery/`, `contents/gallery.md`, reached from the
+  GALLERY navigation item). Do not add further sub-pages without being asked.
 - **Do not replace the template architecture.** `contents/config.yml` defines the site
   metadata, the navigation, and the section list; `contents/<id>.md` supplies each section's
   body; `static/js/scripts.js` fetches, parses, sanitises, and injects them. A page that
   carries `data-markdown="<name>"` on a container renders that one Markdown file instead of
-  the configured section list; that is how `/projects/` works.
+  the configured section list; that is how `/projects/` and `/gallery/` work. A `sections`
+  entry marked `page: true` keeps its navigation item but is not rendered on the front page.
 - **Do not introduce a framework or build system.** No Jekyll, React, Vue, Astro, Next.js,
   npm, Node tooling, Ruby, bundlers, server-side code, databases, or a CMS. No al-folio, no
   Academic Pages, no other academic theme. The site must stay publishable as plain static

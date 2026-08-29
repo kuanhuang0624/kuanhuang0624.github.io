@@ -33,6 +33,10 @@ footer-cv-link:
 # `nav`   -> the label shown in the navigation bar
 # `title` -> the heading shown above the section
 # `href`  -> optional; defaults to '#<id>'
+# `page`  -> optional; `true` means the entry is its own page rather than a
+#            section of this one. It keeps its navigation item, `href` points at
+#            the page, and nothing is rendered here. Its Markdown is loaded by
+#            that page instead (see gallery/index.html).
 # -----------------------------------------------------------------------------
 
 sections:
@@ -55,6 +59,8 @@ sections:
   - id: gallery
     nav: GALLERY
     title: Gallery
+    href: /gallery/
+    page: true
   - id: cv
     nav: CV
     title: Curriculum Vitae

@@ -102,7 +102,8 @@
                         id: section,
                         nav: section.toUpperCase(),
                         title: section.toUpperCase(),
-                        href: '#' + section
+                        href: '#' + section,
+                        page: false
                     };
                 }
                 if (!section || typeof section !== 'object' || !section.id) {
@@ -112,7 +113,10 @@
                     id: section.id,
                     nav: section.nav || section.id.toUpperCase(),
                     title: section.title || section.nav || section.id.toUpperCase(),
-                    href: section.href || '#' + section.id
+                    href: section.href || '#' + section.id,
+                    /* `page: true` means the entry is a link to its own page, so it
+                       gets a navigation item but no section on this page. */
+                    page: section.page === true
                 };
             })
             .filter(Boolean);
@@ -379,14 +383,19 @@
                 applyConfig(config);
                 var sections = normalizeSections(config.sections);
                 renderNavigation(sections);
-                renderSections(sections);
+
+                /* Entries flagged `page` are navigation links to their own page. */
+                var inPage = sections.filter(function (section) {
+                    return !section.page;
+                });
+                renderSections(inPage);
 
                 return Promise.all(
-                    sections.map(function (section) {
+                    inPage.map(function (section) {
                         return loadMarkdownSection(section.id);
                     })
                 ).then(function () {
-                    bindSectionHighlighting(sections);
+                    bindSectionHighlighting(inPage);
                     scrollToInitialHash();
                 });
             })

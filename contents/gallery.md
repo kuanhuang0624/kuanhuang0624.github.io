@@ -1,18 +1,12 @@
-### Gallery Under Construction
+# Gallery
 
-This section is being updated. Photographs from research activities, student presentations,
-teaching, and conferences will be added soon.
-
-<!--
-To add photographs: put the image files in static/assets/img/gallery/ and copy one <li>
-block per photograph into the list below, then delete this comment and the heading and
-paragraph above. The grid is three columns on desktop, two on tablets, and one on small
-screens.
+## July 2026 — IEEE EMBC 2026, Toronto, Canada
 
 <ul class="gallery">
 <li><figure>
-  <img src="static/assets/img/gallery/example.jpg" alt="Describe what the photograph shows" loading="lazy" decoding="async" width="1200" height="800">
-  <figcaption>Short caption, including the year.</figcaption>
+  <img src="/static/assets/img/gallery/embc-2026-toronto-embs-banner.jpg" alt="Kuan Huang standing in front of an IEEE EMBS banner at IEEE EMBC 2026" loading="lazy" decoding="async" width="1000" height="1250">
+</figure></li>
+<li><figure>
+  <img src="/static/assets/img/gallery/embc-2026-toronto-posters.jpg" alt="Kuan Huang and a second attendee standing beside two posters at IEEE EMBC 2026" loading="lazy" decoding="async" width="1000" height="1250">
 </figure></li>
 </ul>
--->

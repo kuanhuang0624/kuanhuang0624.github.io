@@ -719,13 +719,14 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   10. Funded projects page (projects/index.html, contents/projects.md)
+   10. Standalone pages (projects/index.html, gallery/index.html)
    -------------------------------------------------------------------------- */
 
-/* This page carries its own title in the Markdown, so the heading levels are
-   styled here and the Markdown file stays plain. */
+/* These pages carry their own title in the Markdown, so the heading levels are
+   styled here and the Markdown files stay plain. */
 
-#projects-md h1 {
+#projects-md h1,
+#gallery-md h1 {
     margin: 0 0 1.4rem;
     padding-bottom: 0.6rem;
     border-bottom: 1px solid var(--rule);
@@ -771,9 +772,29 @@ details.archive[open] > summary {
     font-size: 0.94rem;
 }
 
+/* Gallery page: the events are group headings, and the photographs sit two to
+   a row on wide screens rather than the three the homepage grid used. */
+#gallery-md h2 {
+    margin: 2.25rem 0 1.1rem;
+    font-size: 1.06rem;
+    font-weight: 650;
+    letter-spacing: 0.005em;
+}
+
+#gallery-md .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (max-width: 34em) {
-    #projects-md h1 {
+    #projects-md h1,
+    #gallery-md h1 {
         font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 40em) {
+    #gallery-md .gallery {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
