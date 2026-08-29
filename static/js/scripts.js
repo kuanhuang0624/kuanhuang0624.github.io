@@ -6,6 +6,10 @@
    navigation and the section list; each section's body is a Markdown file in
    `contents/` that is fetched, parsed and sanitised in the browser.
 
+   A page outside the root (currently `projects/index.html`) shows a single
+   Markdown file instead of the configured section list: it marks its container
+   with `data-markdown="<name>"` and the same fetch/parse/sanitise path is used.
+
    Differences from the upstream template:
      - no rotating background slideshow (the title area is static)
      - no Bootstrap (navigation and section highlighting are implemented here)
@@ -15,7 +19,12 @@
 (function () {
     'use strict';
 
-    var CONTENT_DIR = 'contents/';
+    /* The Markdown and the configuration live in <site root>/contents/.
+       Resolving that from this script's own URL (static/js/scripts.js) keeps
+       pages below the root, such as /projects/, working without hard-coded
+       absolute paths. */
+    var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || '';
+    var CONTENT_DIR = SCRIPT_SRC ? new URL('../../contents/', SCRIPT_SRC).href : 'contents/';
     var CONFIG_FILE = 'config.yml';
 
     /* Keys in config.yml that configure behaviour rather than fill an element. */
@@ -204,16 +213,15 @@
         return template.innerHTML;
     }
 
-    function loadMarkdownSection(id) {
-        return fetch(CONTENT_DIR + id + '.md')
+    function loadMarkdownInto(target, name) {
+        return fetch(CONTENT_DIR + name + '.md')
             .then(function (response) {
                 if (!response.ok) {
-                    throw new Error('Could not load ' + id + '.md (' + response.status + ')');
+                    throw new Error('Could not load ' + name + '.md (' + response.status + ')');
                 }
                 return response.text();
             })
             .then(function (markdown) {
-                var target = document.getElementById(id + '-md');
                 if (!target) {
                     return;
                 }
@@ -222,6 +230,23 @@
             .catch(function (error) {
                 console.warn(error);
             });
+    }
+
+    function loadMarkdownSection(id) {
+        return loadMarkdownInto(document.getElementById(id + '-md'), id);
+    }
+
+    /* A page that carries `data-markdown` shows that one file and nothing else,
+       so the configuration and the section list are not needed there. */
+    function renderMarkdownPage() {
+        var targets = document.querySelectorAll('[data-markdown]');
+        if (targets.length === 0) {
+            return false;
+        }
+        targets.forEach(function (target) {
+            loadMarkdownInto(target, target.getAttribute('data-markdown'));
+        });
+        return true;
     }
 
     /* ----------------------------------------------------------------------
@@ -344,6 +369,10 @@
     document.addEventListener('DOMContentLoaded', function () {
         marked.use({ mangle: false, headerIds: false });
         bindMobileNavigation();
+
+        if (renderMarkdownPage()) {
+            return;
+        }
 
         loadConfig()
             .then(function (config) {

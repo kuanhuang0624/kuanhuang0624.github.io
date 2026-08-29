@@ -27,7 +27,7 @@ label-efficient and trustworthy methods for medical imaging.
 <li><a href="static/assets/pdf/Kuan_Huang_CV_2026.pdf">Curriculum vitae (PDF)</a></li>
 </ul>
 
-Office: GLAB 238, 1000 Morris Avenue, Union, NJ 07083.
+Office: GLAB-231, 1000 Morris Avenue, Union, NJ 07083.
 
 ### Recent News
 

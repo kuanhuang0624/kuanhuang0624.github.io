@@ -697,7 +697,66 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   9. Footer
+   9. Funded projects page (projects/index.html, contents/projects.md)
+   -------------------------------------------------------------------------- */
+
+/* This page carries its own title in the Markdown, so the heading levels are
+   styled here and the Markdown file stays plain. */
+
+#projects-md h1 {
+    margin: 0 0 1.4rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+#projects-md h2 {
+    margin: 2.5rem 0 0.8rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+    font-size: 1.06rem;
+    line-height: 1.4;
+    font-weight: 650;
+    max-width: var(--measure);
+}
+
+/* Funding, award year, role and amount: compact metadata lines, not bullets. */
+#projects-md ul {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+    max-width: var(--measure);
+    font-size: 0.94rem;
+}
+
+#projects-md li {
+    margin: 0 0 0.2rem;
+}
+
+#projects-md li strong {
+    font-weight: 600;
+    color: var(--text-soft);
+}
+
+/* Closing "Return to Research Lab" link */
+#projects-md > p:last-child {
+    margin: 2.25rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.94rem;
+}
+
+@media (max-width: 34em) {
+    #projects-md h1 {
+        font-size: 1.35rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   10. Footer
    -------------------------------------------------------------------------- */
 
 .site-footer {
@@ -732,7 +791,7 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   10. Motion preferences
+   11. Motion preferences
    -------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -750,7 +809,7 @@ details.archive[open] > summary {
 }
 
 /* --------------------------------------------------------------------------
-   11. Print
+   12. Print
    -------------------------------------------------------------------------- */
 
 @media print {

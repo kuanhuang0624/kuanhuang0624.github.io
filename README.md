@@ -35,7 +35,10 @@ site.
 │   ├── lab.md              # research group, students, collaborators
 │   ├── teaching.md         # courses
 │   ├── gallery.md          # photographs
-│   └── cv.md               # CV description and link
+│   ├── cv.md               # CV description and link
+│   └── projects.md         # funded projects, shown at /projects/
+├── projects/
+│   └── index.html          # page shell for /projects/ (nav, footer, no hero)
 └── static/
     ├── assets/
     │   ├── favicon.svg, favicon.png
@@ -186,6 +189,16 @@ describe the photograph, not repeat the caption.
 
 The file currently contains a commented-out example and a placeholder paragraph — delete both
 once real photographs are added.
+
+### The funded projects page
+
+`/projects/` is the only page outside the root. `projects/index.html` is a small shell — the
+same navigation, stylesheet and footer as the homepage — whose content container carries
+`data-markdown="projects"`; `static/js/scripts.js` sees that attribute, renders
+`contents/projects.md` into it, and skips the configuration and section list. To change the
+projects, edit `contents/projects.md` only. Its heading levels are styled by the `#projects-md`
+rules in `static/css/main.css`. Assets on that page use root-relative paths (`/static/...`) so
+that `/projects/` loads directly.
 
 ### The CV
 
