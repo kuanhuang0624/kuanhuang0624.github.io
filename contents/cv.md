@@ -3,4 +3,4 @@ record, teaching, professional service, and honors.
 
 [View or download the CV (PDF)](static/assets/pdf/Kuan_Huang_CV_2026.pdf)
 
-<p class="note">Last updated August 2026.</p>
+<p class="note">Last updated September 2026.</p>
