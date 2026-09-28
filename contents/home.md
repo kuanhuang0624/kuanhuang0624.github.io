@@ -32,6 +32,8 @@ Office: GLAB-231, 1000 Morris Avenue, Union, NJ 07083.
 ### Recent News
 
 <ul class="news">
+<li><span class="date">2026</span><span>One paper accepted by the IEEE International Conference on Bioinformatics and Biomedicine 2026 (BIBM 2026).</span></li>
+<li><span class="date">2026</span><span>Two papers accepted by the AAAI 2026 Fall Symposium Series: one at the Symposium on Agentic and Trustworthy AI for Health and the Global AI-Ready Nursing Workforce (AT-AI4H-NW 2026), and one at the Second AAAI Symposium on Quantum Information &amp; Machine Learning (QIML): Bridging Quantum Computing and Artificial Intelligence.</span></li>
 <li><span class="date">2026</span><span>Appointed GenAI Regional Advocate for the Computing Alliance of Hispanic-Serving Institutions (CAHSI).</span></li>
 <li><span class="date">2026</span><span>Our paper &ldquo;DRSeg: A Weakly Supervised Framework for Breast Ultrasound Image Segmentation&rdquo; was accepted by <em>Scientific Reports</em>.</span></li>
 <li><span class="date">2026</span><span>Three papers accepted by the 48th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC 2026).</span></li>
