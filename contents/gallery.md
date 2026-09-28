@@ -1,5 +1,13 @@
 # Gallery
 
+## September 2026 — GMiS Conference, Albuquerque, New Mexico
+
+<ul class="gallery">
+<li><figure>
+  <img src="/static/assets/img/gallery/gmis-2026-albuquerque.jpg" alt="Kuan Huang and a Kean University student giving a thumbs-up beside the student's poster on deep learning classification of breast cancer in ultrasound videos at the GMiS 2026 conference" loading="lazy" decoding="async" width="999" height="1333">
+</figure></li>
+</ul>
+
 ## July 2026 — IEEE EMBC 2026, Toronto, Canada
 
 <ul class="gallery">
