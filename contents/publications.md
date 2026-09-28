@@ -4,6 +4,20 @@
   M. Xu, B. Hu, Y. Wang, P. Koo, **K. Huang**.
   *Scientific Reports*, 2026. Accepted.
 
+- Adaptive Context-Guided Segment Aggregation with Low-Drop Consistency for Breast Ultrasound
+  Video Classification.
+  J. Liu, Y. Ni, M. Xu, **K. Huang**.
+  *IEEE International Conference on Bioinformatics and Biomedicine (BIBM 2026)*. Accepted.
+
+- Quantum Machine Learning for Image Classification: A Controlled Benchmark.
+  **K. Huang**, M. Xu, Y. Wang.
+  *AAAI 2026 Fall Symposium Series*. Accepted.
+
+- How Does Rigid Registration Affect Fixed-Coordinate Pixel-Anomaly Persistence in Breast
+  Ultrasound?
+  D. Karki, M. Xu, **K. Huang**, Y. Wang.
+  *AAAI 2026 Fall Symposium Series*. Accepted.
+
 - Point-Then-Preach: Coordinate-Guided Spatial Reasoning for Medical Vision-Language Models.
   S. Ali, D. Kwak, **K. Huang**.
   *48th Annual International Conference of the IEEE Engineering in Medicine and Biology
